@@ -17,6 +17,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
       - name: Deploy Website to S3
-        run: aws s3 sync ./index.html s3://newfi.io --include "./assets/" --include "./images/" --include "./src/" --exclude "*" --delete
+        run: aws s3 sync index.html s3://newfi.io --include "./assets/" --include "./images/" --include "./src/" --exclude "*" --delete
       - name: Clean Website Cache
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_WEBSITE_DIST_ID }} --paths "/*"
