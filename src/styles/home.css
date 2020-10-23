@@ -10,32 +10,32 @@
     color: #ffffff !important;
 }
 
-.connect-page h3 {
+.home-page h3 {
     font-size: 30px;
     line-height: 47px;
     color: #ffffff !important;
 }
 
-.connect-page .red {
+.home-page .red {
     color: #f92263;
 }
 
-.connect-page .green {
+.home-page .green {
     color: #27c8d2;
 }
 
-.connect-text h3 {
+.home-text h3 {
     color: #ffffff;
     font-size: 40px;
 }
 
-.connect-page .rainbow {
+.home-page .rainbow {
     background: linear-gradient(120.14deg, #3DB9C8 9.07%, #ED2B69 100%);;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.connect-text {
+.home-text {
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
@@ -77,4 +77,15 @@
 
 .home-dark {
     background: #2f2f2f;
+    color: #ffffff;
+}
+
+.home-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-icon {
+    font-size: 46px;
 }
