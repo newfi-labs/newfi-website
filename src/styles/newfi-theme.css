@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    font-family: -apple-system, Rubik, 'Droid Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html,
+body,
+#root,
+#___gatsby,
+#gatsby-focus-wrapper {
+    height: 100%;
+}
+
+.ant-layout-content {
+    background: #2f2f2f;
+}
+
+body {
+    background: #2f2f2f;
+}
+
+.ant-layout-header {
+    background: #2f2f2f;
+    color: #ffffff;
+}
