@@ -9,10 +9,13 @@ module.exports = {
   plugins: [
       "gatsby-plugin-antd",
       {
-          resolve: `gatsby-plugin-s3`,
+          resolve: `gatsby-plugin-manifest`,
           options: {
-              bucketName: 'newfi.io',
-          },
+              name: `Newfi - Net Worth Experts`,
+              short_name: `Newfi`,
+              start_url: `/`,
+              icon: `src/images/newfi-logo.svg`
+          }
       }
   ],
 };

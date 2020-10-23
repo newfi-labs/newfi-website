@@ -1,7 +1,7 @@
 import React from "react"
 import { Layout, Row, Col } from "antd"
-import textLogo from "../../static/newfi-logo-text.svg"
-import logo from "../../static/newfi-logo.svg"
+import textLogo from "../images/newfi-logo-text.svg"
+import logo from "../images/newfi-logo.svg"
 import 'antd/dist/antd.css';
 import '../styles/newfi-theme.css';
 import '../styles/home.css';
