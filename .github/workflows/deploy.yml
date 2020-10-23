@@ -18,7 +18,13 @@ jobs:
           aws-region: us-east-1
       - name: Install Dependecies
         run: npm install
+      - name: Build
+        run: |
+          npm ci
+          npm run build
       - name: Deploy Website to S3
-        run: npm run deploy
+        uses: jonelantha/gatsby-s3-action@v1
+        with:
+          dest-s3-bucket: newfi.io
       - name: Clean Website Cache
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_WEBSITE_DIST_ID }} --paths "/*"
