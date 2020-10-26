@@ -127,7 +127,7 @@ export default function Home() {
         </div>
       </Content>
       <Footer className="home-dark">
-        <Row>
+        <Row align="middle">
           <Col span={8}>
             <img src={textLogo} width={125} className="App-logo" alt="logo" />
           </Col>
