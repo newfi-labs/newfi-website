@@ -1,6 +1,7 @@
 import React from "react"
 import { Layout, Row, Col } from "antd"
-import { MediumSquareFilled, TwitterOutlined, MessageOutlined } from "@ant-design/icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faDiscord, faMedium, faTwitter} from "@fortawesome/free-brands-svg-icons";
 import textLogo from "../images/newfi-logo-text.svg"
 import logo from "../images/newfi-logo.svg"
 import volatile from "../images/volatile-pool.svg"
@@ -141,16 +142,18 @@ export default function Home() {
               style={{ textAlign: "center" }}
             >
               <Col span={8}>
-                <MessageOutlined className="home-icon" />
+                <a href="https://discord.gg/qTZSpu">
+                <FontAwesomeIcon className="home-icon" icon={faDiscord} />
+                </a>
               </Col>
               <Col span={8}>
                 <a href="https://twitter.com/newfiapp">
-                <TwitterOutlined className="home-icon" />
+                  <FontAwesomeIcon className="home-icon" icon={faTwitter} />
                 </a>
               </Col>
               <Col span={8}>
                 <a href="https://medium.com/@newfi">
-                <MediumSquareFilled className="home-icon" />
+                  <FontAwesomeIcon className="home-icon" icon={faMedium} />
                 </a>
               </Col>
             </Row>

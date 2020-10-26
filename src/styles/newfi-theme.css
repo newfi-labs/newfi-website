@@ -30,3 +30,9 @@ body {
 a {
     color: #ffffff;
 }
+
+a:hover,
+a:active {
+    color: #27c8d2;
+}
+
