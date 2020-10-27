@@ -54,7 +54,7 @@
 }
 
 .home-content-section {
-    padding: 135px 50px;
+    padding: 0 50px;
     background: #F4F4F4;
     text-align: left;
 }
@@ -78,6 +78,14 @@
 .home-dark {
     background: #2f2f2f;
     color: #ffffff;
+}
+
+.home-footer {
+    margin-top: 350px;
+}
+
+.home-divider {
+    margin: 100px 0;
 }
 
 .home-center {
@@ -117,5 +125,9 @@
 
     .footer-icons {
         justify-content: center;
+    }
+
+    .home-footer {
+        margin-top: 100px;
     }
 }

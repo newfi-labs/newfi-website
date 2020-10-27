@@ -14,8 +14,11 @@ import stable from "../images/stable-pool.svg"
 import ethDiamondOne from "../images/eth-diamond-1.svg"
 import ethDiamondTwo from "../images/eth-diamond-2.svg"
 import ethDiamondFour from "../images/eth-diamond-4.svg"
+import ethDiamondFive from "../images/eth-diamond-5.svg"
+import ethDiamondSix from "../images/eth-diamond-6.svg"
 import largeGraphic from "../images/large-graphic.svg"
 import diamondDivider from "../images/diamond-divider.svg"
+import chartViz from "../images/chart-viz.svg"
 import "antd/dist/antd.css"
 import "../styles/newfi-theme.css"
 import "../styles/home.css"
@@ -67,7 +70,7 @@ export default function Home() {
           </Row>
         </div>
         <div className="home-content-section">
-          <Row justify="start" className="home-content-text-box">
+          <Row justify="start" className="home-content-text-box" style={{ marginTop: "135px" }}>
             <Col style={{ zIndex: 1 }} xs={24} sm={24} md={12} lg={12}>
               <h1>
                 Create <b className="rainbow">Investor Strategies</b> For Others
@@ -97,9 +100,12 @@ export default function Home() {
                 width="100%"
                 className="volatile-pool"
                 alt="logo"
+                style={{ zIndex: 1 }}
               />
             </Col>
-            <Col xs={24} sm={24} md={12} lg={12}>
+            <Col xs={24} sm={24} md={12} lg={12}
+                 style={{ zIndex: 1 }}
+            >
               <img
                 src={stable}
                 width="100%"
@@ -116,18 +122,24 @@ export default function Home() {
           <Row align="middle" justify="center">
             <Col span={8}>
               <img
+                  style={{ position: "absolute" }}
                 className="image-responsive"
                 src={ethDiamondTwo}
                 alt="logo"
               />
             </Col>
-            <Col style={{ zIndex: 1 }} className="home-center" span={8}>
+            <Col style={{ zIndex: 1 }} className="home-divider home-center" span={8}>
               <img src={diamondDivider} alt="logo" />
             </Col>
             <Col span={8} />
             <img
               className="image-responsive"
-              style={{ position: "absolute", right: 0, paddingTop: "300px" }}
+              style={{
+                position: "absolute",
+                right: 0,
+                paddingTop: "300px",
+                maxWidth: "50%",
+              }}
               src={ethDiamondFour}
               alt="logo"
             />
@@ -149,11 +161,71 @@ export default function Home() {
             <Col span={12} />
           </Row>
           <div className="home-center">
-            <img width="100%" src={largeGraphic} alt="logo" />
+            <img
+              style={{ zIndex: 1 }}
+              width="100%"
+              src={largeGraphic}
+              alt="logo"
+            />
+          </div>
+        </div>
+        <div
+          className="home-content-section"
+          style={{ width: "100%", padding: "0" }}
+        >
+          <Row align="middle" justify="center">
+            <Col span={8}>
+              <img
+                className="image-responsive"
+                src={ethDiamondSix}
+                alt="logo"
+                style={{ position: "absolute", top: "-450px" }}
+              />
+            </Col>
+            <Col style={{ zIndex: 1 }} className="home-divider home-center" span={8}>
+              <img src={diamondDivider} alt="logo" />
+            </Col>
+            <Col span={8} />
+            <img
+              style={{
+                position: "absolute",
+                right: 0,
+                paddingBottom: "200px",
+                maxWidth: "50%",
+              }}
+              src={ethDiamondFive}
+              alt="logo"
+            />
+          </Row>
+        </div>
+        <div className="home-content-section">
+          <Row justify="start" className="home-content-text-box">
+            <Col xs={24} sm={24} md={12} lg={12}>
+              <h1>
+                Track, Reposition and Make Your Way{" "}
+                <b className="rainbow">to the Top</b>
+                <b className="red">.</b>
+              </h1>
+              <h2>
+                Analyze and manage your overall position. Effortlessly capture
+                rewards and yield. Sell or convert your position at{" "}
+                <b>any time</b>
+                <b className="red">.</b>
+              </h2>
+            </Col>
+            <Col span={12} />
+          </Row>
+          <div className="home-center">
+            <img
+              width="100%"
+              src={chartViz}
+              alt="logo"
+              style={{ position: "absolute" }}
+            />
           </div>
         </div>
       </Content>
-      <Footer className="home-dark">
+      <Footer className="home-dark home-footer">
         <Row className="row-center" justify="center" align="middle">
           <Col xs={24} sm={24} md={8} lg={8}>
             <img src={textLogo} width={125} className="App-logo" alt="logo" />

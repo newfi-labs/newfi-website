@@ -27,6 +27,10 @@ body {
     color: #ffffff;
 }
 
+.ant-layout {
+    background: #F4F4F4;
+}
+
 a {
     color: #ffffff;
 }
