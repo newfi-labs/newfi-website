@@ -89,3 +89,33 @@
 .home-icon {
     font-size: 46px;
 }
+
+.footer-icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+    .home-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image-responsive {
+        width: 100%;
+    }
+
+    .row-center {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .row-center .ant-col {
+        margin: 10px 0;
+    }
+
+    .footer-icons {
+        justify-content: center;
+    }
+}

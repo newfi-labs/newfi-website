@@ -5,16 +5,16 @@
  */
 
 module.exports = {
-  /* Your site config here */
   plugins: [
     "gatsby-plugin-antd",
+    "gatsby-plugin-react-helmet",
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: `Newfi - Net Worth Experts`,
-        short_name: `Newfi`,
-        start_url: `/`,
-        icon: `src/images/newfi-logo.svg`,
+        name: "Newfi - Net Worth Experts",
+        short_name: "Newfi",
+        start_url: "/",
+        icon: "src/images/newfi-logo.svg",
       },
     },
   ],

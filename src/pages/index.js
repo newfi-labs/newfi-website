@@ -1,7 +1,12 @@
 import React from "react"
 import { Layout, Row, Col } from "antd"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faDiscord, faMedium, faTwitter} from "@fortawesome/free-brands-svg-icons";
+import { Helmet } from "react-helmet"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faDiscord,
+  faMedium,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons"
 import textLogo from "../images/newfi-logo-text.svg"
 import logo from "../images/newfi-logo.svg"
 import volatile from "../images/volatile-pool.svg"
@@ -20,7 +25,14 @@ const { Header, Content, Footer } = Layout
 export default function Home() {
   return (
     <Layout>
-      <Header style={{ position: "fixed", zIndex: 1, width: "100%" }}>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>NewFi - Invest with the experts</title>
+      </Helmet>
+      <Header
+        className="home-header"
+        style={{ position: "fixed", zIndex: 2, width: "100%" }}
+      >
         <img src={textLogo} width={125} className="App-logo" alt="logo" />
       </Header>
       <Content
@@ -35,7 +47,7 @@ export default function Home() {
         <div className="home-content-top home-dark">
           <Row style={{ marginBottom: "48px" }}>
             <Col span={24}>
-              <h1>
+              <h1 style={{ margin: "0 20px" }}>
                 Growing your <b className="green">net worth </b>
                 has never been this easy<b className="red">.</b>
               </h1>
@@ -56,7 +68,7 @@ export default function Home() {
         </div>
         <div className="home-content-section">
           <Row justify="start" className="home-content-text-box">
-            <Col span={12}>
+            <Col style={{ zIndex: 1 }} xs={24} sm={24} md={12} lg={12}>
               <h1>
                 Create <b className="rainbow">Investor Strategies</b> For Others
                 to Follow<b className="red">.</b>
@@ -69,17 +81,31 @@ export default function Home() {
             </Col>
             <Col span={12} />
             <img
-              style={{ position: "absolute", right: 0, top: "93%" }}
+              style={{
+                position: "absolute",
+                right: 0,
+                top: "93%",
+              }}
               src={ethDiamondOne}
               alt="logo"
             />
           </Row>
-          <Row gutter={100}>
-            <Col span={12}>
-              <img src={volatile} className="volatile-pool" alt="logo" />
+          <Row gutter={100} justify="center" align="middle">
+            <Col xs={24} sm={24} md={12} lg={12}>
+              <img
+                src={volatile}
+                width="100%"
+                className="volatile-pool"
+                alt="logo"
+              />
             </Col>
-            <Col span={12}>
-              <img src={stable} className="stable-pool" alt="logo" />
+            <Col xs={24} sm={24} md={12} lg={12}>
+              <img
+                src={stable}
+                width="100%"
+                className="stable-pool"
+                alt="logo"
+              />
             </Col>
           </Row>
         </div>
@@ -89,13 +115,18 @@ export default function Home() {
         >
           <Row align="middle" justify="center">
             <Col span={8}>
-              <img src={ethDiamondTwo} alt="logo" />
+              <img
+                className="image-responsive"
+                src={ethDiamondTwo}
+                alt="logo"
+              />
             </Col>
-            <Col className="home-center" span={8}>
+            <Col style={{ zIndex: 1 }} className="home-center" span={8}>
               <img src={diamondDivider} alt="logo" />
             </Col>
             <Col span={8} />
             <img
+              className="image-responsive"
               style={{ position: "absolute", right: 0, paddingTop: "300px" }}
               src={ethDiamondFour}
               alt="logo"
@@ -104,7 +135,7 @@ export default function Home() {
         </div>
         <div className="home-content-section">
           <Row justify="start" className="home-content-text-box">
-            <Col span={12}>
+            <Col xs={24} sm={24} md={12} lg={12}>
               <h1>
                 Manage Your <b className="rainbow">Wealth</b> in One Simple
                 Interface<b className="red">.</b>
@@ -118,23 +149,19 @@ export default function Home() {
             <Col span={12} />
           </Row>
           <div className="home-center">
-            <Row align="center" justify="center">
-              <Col span={24}>
-                <img src={largeGraphic} alt="logo" />
-              </Col>
-            </Row>
+            <img width="100%" src={largeGraphic} alt="logo" />
           </div>
         </div>
       </Content>
       <Footer className="home-dark">
-        <Row align="middle">
-          <Col span={8}>
+        <Row className="row-center" justify="center" align="middle">
+          <Col xs={24} sm={24} md={8} lg={8}>
             <img src={textLogo} width={125} className="App-logo" alt="logo" />
           </Col>
-          <Col span={8} style={{ textAlign: "center" }}>
+          <Col xs={24} sm={24} md={8} lg={8} style={{ textAlign: "center" }}>
             Created at ETHOnline 2020
           </Col>
-          <Col span={8} style={{ display: 'flex', justifyContent:'flex-end' }}>
+          <Col xs={24} sm={24} md={8} lg={8} className="footer-icons">
             <Row
               align="middle"
               justify="center"
@@ -143,7 +170,7 @@ export default function Home() {
             >
               <Col span={8}>
                 <a href="https://discord.gg/qTZSpu">
-                <FontAwesomeIcon className="home-icon" icon={faDiscord} />
+                  <FontAwesomeIcon className="home-icon" icon={faDiscord} />
                 </a>
               </Col>
               <Col span={8}>
